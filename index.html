@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+
+<head>
+
+<link rel="stylesheet" type="text/css" href="content\styles\generalstyles.css">
+
+<title>Quintrell family</title>
+
+<script language="JavaScript">
+
+function popup(FILE, FEATURES) { 
+    CONTENT = "<HTML><HEAD><TITLE>Enlarged image</TITLE></HEAD>" +
+              "<BODY><CENTER><FORM><INPUT TYPE='BUTTON' VALUE='Close'" +
+               "onClick='window.close()'></FORM><P><IMG SRC='" + FILE + 
+               "' BORDER=0>" + "</CENTER>"+ "</BODY></HTML>";
+              pop = window.open("","",FEATURES);
+              pop.document.open();
+              pop.focus();
+              pop.document.write(CONTENT);
+              pop.document.close();
+
+} 
+
+
+function view (imagefile) { 
+   var winShell
+   var atext, btext, ctext;
+   var fso;
+   var quoteS = String.fromCharCode(34);
+
+   atext=self.location.href; // the current page path
+   fso  = new ActiveXObject("Scripting.FileSystemObject"); 
+   btext = fso.GetParentFolderName(atext); // path without the page name
+   delete(fso);
+
+   atext = quoteS + "\\" + btext + exefile  + quoteS; // add the image relative path and put in quotes
+   atext = atext.replace( /\//g, '\\' ); // make sure the slashes are the right way round
+   ctext = "btext = " + btext + " atext = " + atext;
+   // alert(ctext);
+
+   atext = "rundll32.exe %SystemRoot%\system32\shimgvw.dll,ImageView_Fullscreen";
+   // add the image path
+   atext = atext + "\\" + imagefile;
+   alert(text);
+
+   // Run the given executable
+   winShell = new ActiveXObject("WScript.Shell");
+   // winShell.Run(atext);
+   delete(winShell);
+}
+
+</script>
+
+</head>
+
+<title>Quintrell family</title>
+
+<body>
+
+<H1><CENTER>Quintrell family</CENTER></H1>
+<H3>A record of the Quintrell family</H3>
+<br>
+
+<p style="background: Gainsboro; border: 1px solid #0066FF; padding:8px">
+This record is dedicated to the work of Neil Quintrell. Neil's mother Olive was sister to my grandmother Alice.
+<br><br>
+His family website is the result of many hours of research and dedication. It contains a huge amount of information, not only for the Quintrell family, but also for the descendants of the Scott family and the Jarvis family of Alice May and Eric Roy Jarvis.<br><br>
+Sadly, once a website hosting subscription is finished, the site is lost. But fortunately by chance I had made a copy and published it using <a href="https://www.netlify.com/">Netlify</a>. I can now include it as part of the genealogy of the Jarvis family in Australia and re-publish it</a> thanks to GitHub.
+<br><br>
+Lynn Jarvis<br>
+September 2021
+</p>
+<br>
+
+<h3>The Quintrell family</h3>
+
+<p style="background: palegoldenrod; border: 1px solid #0066FF; padding:8px">
+<br>
+<a href="content\index.html" target="blank"><b>The Quintrell family</b></a>
+<br><br>
+The link above leads to pages which include genealogical details, stories and poetry put together by Neil. Many of the images are missing and the page content has errors but I hope to recover images and correct the errors in time.<br><br>
+</p>
+
+<br><br>
+
+</body>
+
+</html>
